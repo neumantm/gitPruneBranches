@@ -82,12 +82,8 @@ while IFS= read -r branch; do
   fi
 done < <(git branch --format '%(refname:lstrip=2)')
 
-echo "Prune remote"
-
 # Delete all the origin/xyz branches
 git remote prune "$remote"
-
-echo "Delete2"
 
 # Delete all branches where we do not find a reason to keep
 
