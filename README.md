@@ -30,3 +30,13 @@ You may also put it into your `PATH`, allowing to just execute it with `gitPrune
 
 You can also rename the script to `git-pruneBranches` and put it into your `PATH`.
 Then you can run it with `git pruneBranches`.
+
+### Nix Flake
+
+This repo is also a [nix flake](https://nixos.wiki/wiki/Flakes) and thus can be installed with e.g.
+
+```bash
+nix shell github:neumantm/gitPruneBranches
+```
+
+Then you can use it with `git pruneBranches`.
