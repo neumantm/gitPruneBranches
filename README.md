@@ -41,7 +41,7 @@ nix shell github:neumantm/gitPruneBranches
 
 Then you can use it with `git pruneBranches`.
 
-When include it in another flake (e.g. your nixos configuration) it is advisable to reuse the nixpgs flake you are already using:
+When include it in another flake (e.g. your nixos configuration) it is advisable to reuse the nixpkgs flake you are already using:
 
 ```nix
 {
