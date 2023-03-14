@@ -40,3 +40,14 @@ nix shell github:neumantm/gitPruneBranches
 ```
 
 Then you can use it with `git pruneBranches`.
+
+When including it in another flake (e.g. your NixOS configuration) it is advisable to reuse the nixpkgs flake you are already using:
+
+```nix
+{
+  inputs.nixpkgs.url = "...";
+  inputs.gitPruneBranches.url = "github:neumantm/gitPruneBranches";
+  inputs.gitPruneBranches.inputs.nixpkgs.follows = "nixpkgs";
+  ...
+}
+```
